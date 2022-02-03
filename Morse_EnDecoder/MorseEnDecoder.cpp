@@ -72,7 +72,7 @@
 // ITU with most punctuation (but without non-english characters - for now)
 const int morseTreeLevels = 6; // Minus top level, also the max nr. of morse signals
 const int morseTableLength = pow(2,morseTreeLevels+1);
-char morseTable[] PROGMEM = 
+const char morseTable[] PROGMEM = 
   " ETIANMSURWDKGOHVF*L*PJBXCYZQ!*54*3***2&*+****16=/***(*7***8*90*"
   "***********?_****\"**.****@***'**-********;!*)*****,****:*******\0";
 
