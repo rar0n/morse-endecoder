@@ -18,5 +18,3 @@ Supports the Standard International Morse code, with the addition of punctuation
 
 
 More details in the [Usage](Usage.md) page.
-
-Also some other details in my blog: http://raronoff.wordpress.com/2010/12/16/morse-endecoder/
