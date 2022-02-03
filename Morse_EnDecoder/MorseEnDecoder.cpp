@@ -24,10 +24,9 @@
  Details: http://raronoff.wordpress.com/2010/12/16/morse-endecoder/
 
  TODO: (a bit messy but will remove in time as it (maybe) gets done)
- - Use micros() for faster timings
  - use different defines for different morse code tables, up to including 9-signal SOS etc
    - how to deal with different Morse language settings? Define's don't work with libraries in Arduino...
-   - possibly combine binary tree with table for the last few signals, to keep size down.
+   - possibly combine binary tree with table for the last few signals, to keep size down?
  - UTF-8 and ASCII encoding
    - configurable setting or both simultaneous?
  - Speed auto sense? (would be nice).
@@ -38,30 +37,22 @@
  
 
  History:
+ 2022.02.03 - raron: Fixed new "const" datatype requirement for PROGMEM constants.
+                 Removed most dev history clutter
  2012.11.25 - raron: Implemented another type of binary tree and algorithms.
-                morseSignalString is now backwards.
+                 morseSignalString is now backwards.
  2012.11.24 - AdH: wrapped encoder digitalWrite calls in virtual start_signal
                  and stop_signal functions to make alternate output methods 
                  easy via subclassing.
  2012.11.22 - Debugged the _underscore_ problem, it got "uppercased" to a
-                question mark. Also, included ampersand (&)
- 2012.11.20 - Finally moved table to PROGMEM! Cleaned up header comments a bit.
- 2012.11.10 - Fixed minor bug: pinMode for the Morse output pin (thanks Rezoss!)
- 2012.01.31 - Tiny update for Arduino 1.0. Fixed header comments.
- 2010.12.06 - Cleaned up code a bit.
-                Added the "MN digraph" ---. for alternate exclamation mark(!).
-                Still encoded as the "KW digraph" -.-.-- though.
- 2010.12.04 - Program changed to use (Decode and Encode) classes instead.
- 2010.12.02 - Changed back to signed timers to avoid overflow.
- 2010.11.30 - Morse punctuation added (except $ - the dollar sign).
- 2010.11.29 - Added echo on/off command.
- 2010.11.28 - Added simple Morse audio clipping filter + Command parser.
+                 question mark. Also, included ampersand (&)
+ 2012.01.31 - Tiny update for Arduino 1.0
  2010.11.27 - Added Morse encoding via reverse-dichotomic path tracing.
-                Thus using the same Morse tree for encoding and decoding.
+                 Thus using the same Morse tree for encoding and decoding.
  2010.11.11 - Complete Rewrite for the Arduino.
  1992.01.06 - My old rather unknown "Morse decoder 3.5" for Amiga 600.
-                A 68000 Assembler version using a binary tree for Morse
-                decoding only, of which this is based on.
+                 A 68000 Assembler version using a binary tree for Morse
+                 decoding only, of which this is based on.
 */ 
 
 #include "MorseEnDecoder.h"
